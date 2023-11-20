@@ -1,0 +1,66 @@
+configVersion: 1
+name: magnetic-api
+id: "ari:cloud:compass:7d7a1354-b50b-4f1e-b409-1f3c509aea99:component/910c34fb-0e18-40c8-8568-c31a5cefb046/b4bac4a5-df70-4987-b252-d018f7df915e"
+description: API proxy between magnetic-web and backend services.
+typeId: SERVICE
+ownerId: "ari:cloud:teams::team/07f3a1d7-efd4-489c-8f54-d8e19e2f3462"
+fields:
+  tier: 1
+  lifecycle: Active
+labels:
+  - aws
+  - docker
+  - kubernetes
+  - magnetic
+  - python3
+links:
+  - name: "#magnetic"
+    type: CHAT_CHANNEL
+    url: "https://magnetsinc.slack.com/archives/C049E2AUHRC"
+  - name: "Jira"
+    type: PROJECT
+    url: "https://magnetsinc.atlassian.net/browse/MAG"
+  - name: Architecture overview
+    type: DOCUMENT
+    url: "https://magnetsinc.atlassian.net/wiki/spaces/MAGNETIC/pages/19955713/Architecture+overview"
+  - name: Runbook
+    type: DOCUMENT
+    url: "https://magnetsinc.atlassian.net/wiki/spaces/MAGNETIC/pages/20054017/Runbook"
+  - name: API design specs
+    type: DOCUMENT
+    url: "https://magnetsinc.atlassian.net/wiki/spaces/MAGNETIC/pages/20119553/API+design+specs"
+  - name: Endpoint contracts
+    type: DOCUMENT
+    url: "https://magnetsinc.atlassian.net/wiki/spaces/MAGNETIC/pages/20152321/Endpoint+contracts"
+  - name: Observability Dashboard
+    type: DASHBOARD
+    url: "https://app.datadoghq.com/dashboard/v43-thf-yrv/dashboard"
+  - name: On call schedule
+    type: ON_CALL
+    url: "https://compass-magnets.app.opsgenie.com/settings/schedule/detail/1dfac1e0-2e8b-4b70-a39a-16debccf3796"
+  - name: Opsgenie service
+    type: OTHER_LINK
+    url: "https://compass-magnets.app.opsgenie.com/service/788fee36-b6c0-4ef3-9d01-f38890574e6f/status"
+  - name: LaunchDarkly flags
+    type: OTHER_LINK
+    url: "https://app.launchdarkly.com/default/production/features?state=live&tag=compass.magnetic-api"
+customFields:
+  - name: "Data encrypted in transit?"
+    type: text
+    value: yes
+  - name: "Data encrypted at rest?"
+    type: text
+    value: n/a
+  - name: "Last security review"
+    type: text
+    value: "2023-03-27"
+relationships:
+  DEPENDS_ON:
+    - "ari:cloud:compass:7d7a1354-b50b-4f1e-b409-1f3c509aea99:component/910c34fb-0e18-40c8-8568-c31a5cefb046/4e560f2b-cc3d-4735-9407-a2d494459d5e"
+    - "ari:cloud:compass:7d7a1354-b50b-4f1e-b409-1f3c509aea99:component/910c34fb-0e18-40c8-8568-c31a5cefb046/1e0b790f-2c67-409a-9b7c-3ea9ac1035df"
+    - "ari:cloud:compass:7d7a1354-b50b-4f1e-b409-1f3c509aea99:component/910c34fb-0e18-40c8-8568-c31a5cefb046/9e972f77-e6e1-41b2-8c26-d30758eb4a14"
+    - "ari:cloud:compass:7d7a1354-b50b-4f1e-b409-1f3c509aea99:component/910c34fb-0e18-40c8-8568-c31a5cefb046/b0fc76b8-1924-4cc3-bc1d-26471553bfd6"
+    - "ari:cloud:compass:7d7a1354-b50b-4f1e-b409-1f3c509aea99:component/910c34fb-0e18-40c8-8568-c31a5cefb046/8050cf30-f87e-4bc2-b4ee-91d9b7e74529"
+# Learn more about formatting compass.yml:
+# https://go.atlassian.com/compass-yml-format11
+
