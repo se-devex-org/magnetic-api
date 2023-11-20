@@ -10,7 +10,7 @@ fields:
 links:
   - name: magnetic-api
     type: REPOSITORY
-    url: 'https://github.com/se-devex-org/magnetic-api/'
+    url: 'https://github.com/se-devex-org/magnetic-api'
   - name: Jira
     type: PROJECT
     url: 'https://sedemo-devex-1.atlassian.net/browse/MOBL'
