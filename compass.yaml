@@ -14,7 +14,7 @@ links:
   - name: Jira
     type: PROJECT
     url: 'https://sedemo-devex-1.atlassian.net/browse/MOBL'
-  - name: Architecture overview
+  - name: Component overview
     type: DOCUMENT
     url: 'https://sedemo-devex-1.atlassian.net/wiki/spaces/MD/overview'
   - name: RB - Logstash monitoring
