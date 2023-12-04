@@ -56,7 +56,7 @@ customFields:
     type: text
     value: '2023-03-27'
   - name: AWS Region
-    type: multi-select
+    type: MULTI_SELECT
     value: 'us-east-1'
 
 # Learn more about formatting compass.yml:
