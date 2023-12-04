@@ -55,6 +55,9 @@ customFields:
   - name: Last security review
     type: text
     value: '2023-03-27'
+  - name: AWS Region
+    type: multi-select
+    value: 'us-east-1'
 
 # Learn more about formatting compass.yml:
 # https://go.atlassian.com/compass-yml-format
