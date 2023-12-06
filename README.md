@@ -1,3 +1,2 @@
 # magnetic-api
-Darryl's Testing
-This is interesting
+Darryl updated the readme file
