@@ -1,5 +1,5 @@
 name: magnetic-api
-id: 'ari:cloud:compass:a52dfdae-b7fc-40ec-80f3-9f57c97d76ce:component/5febc276-1c07-482c-8a84-8103641855ae/cd60f549-cd2b-4fbd-9e2a-6b3e0f4f5ff3'
+id: 'ari:cloud:compass:cd60f549-cd2b-4fbd-9e2a-6b3e0f4f5ff3?selectedId=6f9459a3-f6ff-4471-8ca7-52f7253c8ffb'
 description: API proxy between magnetic-web and backend services.
 configVersion: 1
 typeId: SERVICE
