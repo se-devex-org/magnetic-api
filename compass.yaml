@@ -34,7 +34,6 @@ links:
     url: 'https://devex-house.app.opsgenie.com/service/3331b02f-ee45-45c6-9cb1-0cbf92c5d7d0'
 relationships:
   DEPENDS_ON:
-    - 'ari:cloud:compass:a52dfdae-b7fc-40ec-80f3-9f57c97d76ce:component/5febc276-1c07-482c-8a84-8103641855ae/9bb74178-cbc6-48c2-8e74-1ef345ee1b97'
     - 'ari:cloud:compass:a52dfdae-b7fc-40ec-80f3-9f57c97d76ce:component/5febc276-1c07-482c-8a84-8103641855ae/0ce894d8-2ffc-482d-b35c-872aa85002db'
     - 'ari:cloud:compass:a52dfdae-b7fc-40ec-80f3-9f57c97d76ce:component/5febc276-1c07-482c-8a84-8103641855ae/c53d0f9e-97b8-46f7-92a3-2547667751b5'
     - 'ari:cloud:compass:a52dfdae-b7fc-40ec-80f3-9f57c97d76ce:component/5febc276-1c07-482c-8a84-8103641855ae/c9a88137-c2b8-4994-a1ce-34ff2c785dba'
