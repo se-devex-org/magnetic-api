@@ -59,6 +59,3 @@ customFields:
     type: MULTI_SELECT
     value: 
     - 9d8b4c9a-6400-4f58-9fc0-63ea394a6968
-
-# Learn more about formatting compass.yml:
-# https://go.atlassian.com/compass-yml-format
