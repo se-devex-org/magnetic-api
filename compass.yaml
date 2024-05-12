@@ -11,10 +11,10 @@ links:
   - name: magnetic-api
     type: REPOSITORY
     url: 'https://github.com/se-devex-org/magnetic-api'
-  - name: Jira
+  - name: Alpha Mobile Jira project
     type: PROJECT
     url: 'https://devex-house.atlassian.net/browse/MOBL'
-  - name: Component overview
+  - name: Architecture overview
     type: DOCUMENT
     url: 'https://devex-house.atlassian.net/wiki/spaces/MD/overview'
   - name: RB - Logstash monitoring
