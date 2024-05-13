@@ -47,7 +47,7 @@ labels:
 customFields:
   - name: Data encrypted at rest
     type: text
-    value: n/a
+    value: ''
   - name: Data encrypted in transit
     type: text
     value: 'yes'
