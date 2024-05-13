@@ -45,9 +45,6 @@ labels:
   - magnetize
   - python3
 customFields:
-  - name: Data encrypted at rest
-    type: text
-    value: ''
   - name: Data encrypted in transit
     type: text
     value: 'yes'
