@@ -14,9 +14,9 @@ links:
   - name: Alpha Mobile Jira project
     type: PROJECT
     url: 'https://devex-house.atlassian.net/browse/MOBL'
-  - name: Architecture overview
+  - name: Technical design overview
     type: DOCUMENT
-    url: 'https://devex-house.atlassian.net/wiki/spaces/MD/overview'
+    url: 'https://devex-house.atlassian.net/wiki/spaces/MD/pages/51380227/magnetic-api+-+Technical+Design+Overview'
   - name: RB - Logstash monitoring
     type: DOCUMENT
     url: 'https://devex-house.atlassian.net/wiki/spaces/ITO/pages/721041/RB+-+Logstash+monitoring'
