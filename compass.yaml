@@ -57,4 +57,4 @@ customFields:
   - name: AWS Region
     type: MULTI_SELECT
     value: 
-    - 9d8b4c9a-6400-4f58-9fc0-63ea394a6968
+    - 'emea-north-1'
