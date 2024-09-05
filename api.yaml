@@ -1,17 +1,17 @@
 ---
-apiVersion: v3
+apiVersion: v4
 kind: ServiceAccount
 metadata:
   name: api
 ---
-apiVersion: v1
+apiVersion: v2
 kind: Service
 metadata:
   labels:
     app: api
   name: api
   annotations:
-    cloud.google.com/neg: '{"ingress": true}'
+    cloud.google.com/neg: '{"ingress": false}'
 spec:
   ports:
   - name: http
