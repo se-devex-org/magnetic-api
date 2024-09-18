@@ -73,6 +73,12 @@ paths:
           description: The id of the pet to retrieve
           schema:
             type: string
+        - name: petAlias
+          in: path
+          required: false
+          description: The alias of the pet to retrieve
+          schema:
+            type: string
       responses:
         '200':
           description: Expected response to a valid request
