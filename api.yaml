@@ -7,6 +7,67 @@ info:
 servers:
   - url: http://petstore.swagger.io/v1
 paths:
+  /users/enroll-facial-biometrics:
+    post:
+      summary: Enroll facial biometrics for a user
+      operationId: enrollFacialBiometrics
+      tags:
+        - users
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userId:
+                  type: string
+                facialData:
+                  type: string
+                  format: binary
+        required: true
+      responses:
+        '200':
+          description: Facial biometrics enrolled successfully
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /users/login-with-facial-recognition:
+    post:
+      summary: Login using facial recognition
+      operationId: loginWithFacialRecognition
+      tags:
+        - users
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userId:
+                  type: string
+                facialData:
+                  type: string
+                  format: binary
+        required: true
+      responses:
+        '200':
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
   /pets:
     get:
       summary: List all pets
