@@ -92,6 +92,47 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
+  /login/face-recognition:
+    post:
+      summary: Login using facial recognition
+      operationId: loginWithFaceRecognition
+      tags:
+        - authentication
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - faceData
+              properties:
+                faceData:
+                  type: string
+                  description: Base64 encoded facial image data
+        required: true
+      responses:
+        '200':
+          description: Successful login
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    description: Authentication token
+        '401':
+          description: Unauthorized, face not recognized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
 components:
   schemas:
     Pet:
