@@ -92,6 +92,68 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
+  /2fa/send:
+    post:
+      summary: Send a 2FA code
+      operationId: send2FACode
+      tags:
+        - 2FA
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userId:
+                  type: string
+                location:
+                  type: string
+                phoneNumber:
+                  type: string
+              required:
+                - userId
+                - location
+      responses:
+        '200':
+          description: 2FA code sent successfully
+        '400':
+          description: Bad request
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /2fa/verify:
+    post:
+      summary: Verify a 2FA code
+      operationId: verify2FACode
+      tags:
+        - 2FA
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userId:
+                  type: string
+                code:
+                  type: string
+              required:
+                - userId
+                - code
+      responses:
+        '200':
+          description: 2FA code verified successfully
+        '400':
+          description: Invalid 2FA code
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
 components:
   schemas:
     Pet:

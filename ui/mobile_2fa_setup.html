@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2FA Setup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Two-Factor Authentication Setup</h1>
+        <p>Enhance the security of your account by enabling two-factor authentication (2FA).</p>
+
+        <form id="2fa-setup-form">
+            <div class="form-group">
+                <label for="2fa-method">Choose 2FA Method:</label>
+                <select id="2fa-method" name="2fa-method">
+                    <option value="sms">SMS-based</option>
+                    <option value="app">App-based</option>
+                </select>
+            </div>
+
+            <div id="sms-setup" class="2fa-setup">
+                <h2>SMS-based 2FA</h2>
+                <p>Enter your phone number to receive verification codes via SMS.</p>
+                <input type="tel" id="phone-number" name="phone-number" placeholder="Enter phone number">
+            </div>
+
+            <div id="app-setup" class="2fa-setup" style="display: none;">
+                <h2>App-based 2FA</h2>
+                <p>Scan the QR code with your authentication app to set up 2FA.</p>
+                <img src="qrcode.png" alt="QR Code for 2FA setup">
+            </div>
+
+            <button type="submit">Enable 2FA</button>
+        </form>
+
+        <button id="disable-2fa">Disable 2FA</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
