@@ -1,12 +1,97 @@
 openapi: "3.0.0"
 info:
   version: 1.0.0
-  title: Swagger Petstore
+  title: Pet Store API
   license:
     name: MIT
 servers:
   - url: http://petstore.swagger.io/v1
 paths:
+  /auth/2fa/setup:
+    post:
+      summary: Setup 2FA for a user
+      operationId: setup2FA
+      tags:
+        - authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TwoFactorSetupRequest'
+      responses:
+        '200':
+          description: 2FA setup successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TwoFactorSetupResponse'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /auth/2fa/verify:
+    post:
+      summary: Verify 2FA code
+      operationId: verify2FA
+      tags:
+        - authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TwoFactorVerifyRequest'
+      responses:
+        '200':
+          description: 2FA verification successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TwoFactorVerifyResponse'
+        '401':
+          description: Invalid verification code
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /auth/2fa/disable:
+    post:
+      summary: Disable 2FA for a user
+      operationId: disable2FA
+      tags:
+        - authentication
+      responses:
+        '200':
+          description: 2FA disabled successfully
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
   /pets:
     get:
       summary: List all pets
@@ -123,3 +208,53 @@ components:
           format: int32
         message:
           type: string
+    TwoFactorSetupRequest:
+      type: object
+      required:
+        - method
+      properties:
+        method:
+          type: string
+          enum: [sms, app]
+        phoneNumber:
+          type: string
+          description: Required when method is 'sms'
+
+    TwoFactorSetupResponse:
+      type: object
+      required:
+        - secret
+        - qrCode
+      properties:
+        secret:
+          type: string
+          description: Secret key for app-based 2FA or verification code for SMS
+        qrCode:
+          type: string
+          description: QR code URL for app-based 2FA (only present for app-based method)
+        verificationId:
+          type: string
+          description: Verification ID for completing the setup process
+
+    TwoFactorVerifyRequest:
+      type: object
+      required:
+        - code
+      properties:
+        code:
+          type: string
+          description: Verification code from SMS or authenticator app
+        verificationId:
+          type: string
+          description: Verification ID received during setup
+
+    TwoFactorVerifyResponse:
+      type: object
+      required:
+        - success
+      properties:
+        success:
+          type: boolean
+        token:
+          type: string
+          description: New session token after successful 2FA verification
