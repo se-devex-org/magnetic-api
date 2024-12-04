@@ -38,6 +38,9 @@ relationships:
     - 'ari:cloud:compass:a52dfdae-b7fc-40ec-80f3-9f57c97d76ce:component/5febc276-1c07-482c-8a84-8103641855ae/c53d0f9e-97b8-46f7-92a3-2547667751b5'
     - 'ari:cloud:compass:a52dfdae-b7fc-40ec-80f3-9f57c97d76ce:component/5febc276-1c07-482c-8a84-8103641855ae/c9a88137-c2b8-4994-a1ce-34ff2c785dba'
     - 'ari:cloud:compass:a52dfdae-b7fc-40ec-80f3-9f57c97d76ce:component/5febc276-1c07-482c-8a84-8103641855ae/c541ce9b-3275-4953-9e36-9b624a0f9e37'
+    - 'ari:cloud:compass:a52dfdae-b7fc-40ec-80f3-9f57c97d76ce:component/5febc276-1c07-482c-8a84-8103641855ae/d3a3e015-e80f-4442-9a46-49d1ce55e308'
+    - 'ari:cloud:compass:a52dfdae-b7fc-40ec-80f3-9f57c97d76ce:component/5febc276-1c07-482c-8a84-8103641855ae/5fac96e9-d690-4f9e-b34f-996a85ff5f5b'
+    - 'ari:cloud:compass:a52dfdae-b7fc-40ec-80f3-9f57c97d76ce:component/5febc276-1c07-482c-8a84-8103641855ae/b9f31885-caad-4348-a97f-a35a09215703'
 labels:
   - api
   - docker
