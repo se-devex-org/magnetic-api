@@ -1,5 +1,11 @@
+# magnetic-api
+Darryl updated the readme file
+Test int
+TestTest
+New stuff
+ABC
+Rachid Text For Demo
 API Documentation/Demo 1.0
-=================
 
 Welcome to the API documentation for the **Magnetic API**. This API provides seamless integration and access to various functionalities for developers. Below you will find essential information to get started with the API.
 
