@@ -1,6 +1,6 @@
 =================
 API Documentation
-Issue MSTAR-366
+Issue MSTAR-382
 =================
 
 Welcome to the API documentation for the **Magnetic API**. This API provides seamless integration and access to various functionalities for developers. Below you will find essential information to get started with the API.
